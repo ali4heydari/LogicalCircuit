@@ -11,6 +11,10 @@
 \usepackage{float}
 \usepackage[colorinlistoftodos]{todonotes}
 
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
+
 
 
 
@@ -19,19 +23,19 @@
 
 \begin{titlepage}
 
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 \center
 
 \includegraphics[scale=0.3]{IUST_logo_color}\\[1cm]
 \textsc{\Large Iran University of Science and Technology}\\[1.5cm]
-\textsc{Logical Circuit }\\[0.5cm]
-%\textsc{\large Minor Heading}\\[0.5cm]
+\textsc{\large Department of computer engineering}\\[0.5cm]
+\textsc{Logic circuit}\\[0.5cm]
 
 
 
 \HRule \\[0.4cm]
-{ \huge \bfseries designing washing machine timer circuit}\\[0.4cm]
+{ \huge \bfseries Designing washing machine timer circuit}\\[0.4cm]
 \HRule \\[1.5cm]
 
 \Large \emph{Author:}\\
@@ -59,8 +63,8 @@ A washing machine is a machine that washes dirty clothes. It contains a barrel i
 \begin{itemize}
   \item  With pressing a the key, the washing machine starts, provided that the valve and the door of the washing machine are closed and the program is selected.
   \item The machine has two hot-water rinses and cold water rinses which are characterized by the change of the key's position.
-  \item  In the cold water wash program, dewatering, washing, evacuation, and then drying is done in $ T_1, T_3, T_4, T_5$ \footnote{\label{pulses note} Consider $T_1, T_4, T-5$  seconds for 2 pulses of clock and $T_2, T_3$  seconds for 3 pulses of clock}  second, respectively.
-  \item In warm water washing programs, dewatering, water heating, washing, discharging, and then drying in $ T_1, T_3, T_4, T_5 $  \footnotemark{\ref{pulses note}}  second, respectively, is performed.
+  \item  In the cold water wash program, dewatering, washing, evacuation, and then drying is done in $ T_1, T_3, T_4, T_5$  \footnote{\label{pulses note} Consider $T_1, T_4, T_5$  seconds for 2 pulses of clock and $T_2, T_3$  seconds for 3 pulses of clock}  second, respectively.
+  \item In warm water washing programs, dewatering, water heating, washing, discharging, and then drying in $ T_1, T_3, T_4, T_5 $  \footnotemark{pulses note}  second, respectively, is performed.
 
 \end{itemize}
 
@@ -114,4 +118,4 @@ For example, for the number one lamp, as shown in the table. We need  OR to outp
 \caption{\label{fig:Circuit2}Washing machine timer circuit2.}
 \end{figure}
 
-\end{document}
+\end{document} 
